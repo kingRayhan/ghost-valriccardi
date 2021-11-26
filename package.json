@@ -1,0 +1,64 @@
+{
+  "name": "ghost-starter",
+  "version": "1.0.0",
+  "description": "A custom theme for ghost",
+  "scripts": {
+    "dev:tw": "tailwindcss -i assets/theme.src.css -o assets/theme.dist.css --watch",
+    "build:tw": "tailwindcss -i assets/theme.src.css -o assets/theme.dist.css --minify",
+    "build": "npm run build:tw && node zip"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.4.1",
+    "autoprefixer": "^10.4.0",
+    "dir-archiver": "^1.2.0",
+    "postcss": "^8.4.1",
+    "tailwindcss": "^2.2.19"
+  },
+  "engines": {
+    "ghost": ">=4.0.0",
+    "ghost-api": "v4"
+  },
+  "author": {
+    "name": "kingrayhan",
+    "email": "md.raihan095@northsouth.edu",
+    "url": "https://rayhan.dev"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal"
+    ]
+  },
+  "keywords": [
+    "ghost-theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Daemon-Themes/ghost-starter"
+  },
+  "bugs": "https://github.com/Daemon-Themes/ghost-starter/issues",
+  "license": "ISC",
+  "config": {
+    "posts_per_page": 15,
+    "image_sizes": {
+      "xxs": {
+        "width": 30
+      },
+      "xs": {
+        "width": 100
+      },
+      "s": {
+        "width": 300
+      },
+      "m": {
+        "width": 600
+      },
+      "l": {
+        "width": 1200
+      },
+      "xl": {
+        "width": 2000
+      }
+    }
+  }
+}

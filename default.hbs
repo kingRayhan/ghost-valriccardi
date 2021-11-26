@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{meta_title}}</title>
+    <link rel="stylesheet" href="{{asset 'theme.dist.css'}}">
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    <div class="max-w-2xl mx-auto">
+        {{navigation}}
+    </div>
+
+    <main class="wrapper">
+        {{{body}}}
+    </main>
+
+    {{ghost_foot}}
+    <script src="{{asset 'jquery.js'}}"></script>
+    <script src="{{asset 'theme.js'}}"></script>
+
+    {{#is "post, page"}}
+    <script src="{{asset 'jquery.fitvids.js'}}"></script>
+    <script src="{{asset 'medium-zoom.js'}}"></script>
+    <script>
+        var images = document.querySelectorAll('.kg-gallery-image img');
+        images.forEach(function (image) {
+            var container = image.closest('.kg-gallery-image');
+            var width = image.attributes.width.value;
+            var height = image.attributes.height.value;
+            var ratio = width / height;
+            container.style.flex = ratio + ' 1 0%';
+        });
+
+        mediumZoom(document.querySelectorAll('.content-typography img'), {
+            background: '#fff',
+            scrollOffset: 20
+        });
+        
+        $(document).ready(function () {
+            $('.content-typography').fitVids();
+        });
+    </script>
+    {{/is}}
+
+</body>
+</html>

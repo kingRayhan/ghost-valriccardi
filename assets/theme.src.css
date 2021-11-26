@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .wrapper {
+    max-width: 1170px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@layer utilities {
+  /* Text colos
+  /* ---------------------------------------------------------- */
+  .text-color-dark-primary {
+    /* @apply text-red-500 dark:text-green-500; */
+    @apply text-dark-primary dark:text-dark-primary-dark;
+  }
+
+  .text-color-dark-secondary {
+    /* @apply text-yellow-500 dark:text-purple-500; */
+    @apply text-dark-secondary dark:text-dark-secondary-dark;
+  }
+
+  .text-color-dark-tertiary {
+    /* @apply text-pink-500 dark:text-pink-500; */
+    @apply text-dark-tertiary dark:text-dark-tertiary-dark;
+  }
+}
+
+/* Content Typography
+/* ---------------------------------------------------------- */
+.post-template,
+.page-template {
+  @apply overflow-x-hidden;
+}
+
+.content-typography {
+  @apply prose prose-xl max-w-none;
+  @apply text-color-dark-secondary;
+  @apply flex flex-col items-center;
+}
+.content-typography * {
+  @apply self-start;
+}
+
+.content-typography h1,
+.content-typography h2,
+.content-typography h3,
+.content-typography h4,
+.content-typography h5,
+.content-typography h6,
+.content-typography blockquote,
+.content-typography strong {
+  @apply text-color-dark-primary;
+}
+
+.content-typography figcaption {
+  @apply !text-color-dark-tertiary;
+}
+.content-typography hr {
+  @apply w-full dark:border-gray-600;
+}
+
+.content-typography a {
+  @apply text-color-dark-primary;
+}
+
+.content-typography .kg-embed-card {
+  /* @apply aspect-w-16 aspect-h-9; */
+}
+
+.content-typography blockquote {
+  @apply border-accent;
+}
+
+/* Bookmark Cards
+/* ---------------------------------------------------------- */
+.kg-bookmark-card {
+  @apply transition-shadow duration-200 shadow hover:shadow-md;
+}
+
+.kg-bookmark-container {
+  @apply flex !no-underline rounded-sm overflow-hidden;
+}
+
+.kg-bookmark-content {
+  @apply flex-1 p-4;
+}
+.kg-bookmark-title {
+  @apply text-xl font-semibold;
+}
+
+.kg-bookmark-description {
+  @apply my-4 text-sm font-normal leading-6 text-color-dark-primary;
+}
+.kg-bookmark-metadata {
+  @apply flex items-center space-x-2;
+}
+.kg-bookmark-icon {
+  @apply !m-0 w-5 h-5 flex-none;
+}
+.kg-bookmark-author,
+.kg-bookmark-publisher {
+  @apply text-sm text-color-dark-secondary;
+}
+
+.kg-bookmark-author {
+  @apply text-sm text-gray-500;
+}
+
+.kg-bookmark-thumbnail {
+  @apply w-1/3;
+}
+
+.kg-bookmark-thumbnail img {
+  @apply object-cover w-full h-full;
+  @apply m-0;
+}
+
+/* Galleries and Images
+/* ---------------------------------------------------------- */
+.kg-card {
+  @apply self-center w-full;
+}
+figcaption {
+  @apply text-center;
+}
+
+.kg-image {
+  @apply w-full;
+}
+
+/* Size: Wide */
+.kg-width-wide {
+  @apply w-screen max-w-[60vw];
+}
+
+/* Size: Fullwide */
+.kg-width-full {
+  @apply w-screen max-w-[100vw];
+}
+
+/* Gallery */
+.kg-gallery-container {
+  @apply flex flex-col gap-4;
+}
+
+.kg-gallery-row {
+  @apply flex items-center gap-4;
+}
+.kg-gallery-image img {
+  @apply m-0;
+}
