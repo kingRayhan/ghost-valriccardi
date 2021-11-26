@@ -1,0 +1,24 @@
+<article class="grid gap-12 md:grid-cols-2">
+    {{#if feature_image}}
+    <a href="{{ url }}" class="inline-block aspect-w-1 aspect-h-1">
+        <img class="object-cover w-full h-full" srcset="{{img_url feature_image size='s'}} 300w, {{img_url feature_image size='m' }} 600w,
+            {{img_url feature_image size='l' }} 1000w, {{img_url feature_image size='xl' }} 2000w"
+            sizes="(max-width: 1000px) 400px, 700px" src="{{img_url feature_image size=" m"}}"
+            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+    </a>
+    {{/if}}
+    
+    <div class="flex flex-col justify-center">
+        <h2 class="my-4 text-3xl font-bold ">
+            <a href="{{ url }}">{{title}}</a>
+        </h2>
+        <p class="text-gray-600 line-clamp-3">{{excerpt}}</p>
+
+        <a href="#" class="flex items-center mt-3 space-x-3 text-xl">
+            <span>Learn More</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+        </a>
+    </div>
+</article>

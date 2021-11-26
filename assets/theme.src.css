@@ -38,6 +38,20 @@
   }
 }
 
+/* Navigation */
+.header-nav .nav,
+.footer-nav .nav {
+  @apply flex space-x-5;
+}
+
+.header-nav .nav {
+  @apply font-semibold uppercase;
+}
+
+.footer-nav .nav {
+  @apply text-dark-secondary;
+}
+
 /* Content Typography
 /* ---------------------------------------------------------- */
 .post-template,
@@ -47,7 +61,7 @@
 
 .content-typography {
   @apply prose prose-xl max-w-none;
-  @apply text-color-dark-secondary;
+  @apply text-color-dark-primary;
   @apply flex flex-col items-center;
 }
 .content-typography * {
@@ -143,7 +157,7 @@ figcaption {
 
 /* Size: Wide */
 .kg-width-wide {
-  @apply w-screen max-w-[60vw];
+  @apply w-screen lg:max-w-[60vw] md:max-w-[90vw];
 }
 
 /* Size: Fullwide */
