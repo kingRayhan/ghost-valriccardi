@@ -1,0 +1,13 @@
+<div class="flex justify-between p-8">
+    <a class="text-2xl font-medium " href="{{@site.url}}">
+        {{#if @site.logo}}
+        <img src="{{@site.logo}}" alt="{{@site.title}}" class="w-auto h-8 mr-4 ">
+        {{else}}
+        {{@site.title}}
+        {{/if}}
+    </a>
+
+    {{navigation}}
+
+    <a class="text-lg font-semibold uppercase" href="#/portal/login">Login</a>
+</div>

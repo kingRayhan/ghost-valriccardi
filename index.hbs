@@ -1,5 +1,12 @@
 {{!< default}} 
 
+{{#if @site.description}}
+<div class="max-w-2xl mx-auto my-20 text-center">
+    <h2 class="text-5xl font-bold">{{@site.description}}</h2>
+</div>
+{{/if}}
+
+
 <div class="flex flex-col space-y-6">
     {{#foreach posts}}
         {{> "card"}}
