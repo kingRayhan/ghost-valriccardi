@@ -1,0 +1,13 @@
+.nav {
+  @apply flex space-x-5;
+
+  &__link {
+    @apply uppercase;
+    .header-nav & {
+      @apply text-sm font-semibold uppercase;
+    }
+    .footer-nav & {
+      @apply text-dark-secondary capitalize;
+    }
+  }
+}

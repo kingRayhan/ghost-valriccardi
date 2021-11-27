@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "A custom theme for ghost",
   "scripts": {
-    "dev:tw": "tailwindcss -i assets/theme.src.css -o assets/theme.dist.css --watch",
-    "build:tw": "tailwindcss -i assets/theme.src.css -o assets/theme.dist.css --minify",
+    "dev": "gulp",
     "build": "npm run build:tw && node zip"
   },
   "devDependencies": {
@@ -12,8 +11,13 @@
     "@tailwindcss/line-clamp": "^0.2.2",
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.4.0",
+    "browser-sync": "^2.27.7",
     "dir-archiver": "^1.2.0",
-    "postcss": "^8.4.1",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.43.5",
     "tailwindcss": "^2.2.19"
   },
   "engines": {

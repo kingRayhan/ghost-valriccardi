@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-roboto;
+  }
+}
+
+@layer components {
+  .wrapper {
+    max-width: 1170px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@layer utilities {
+  /* Text colos
+  /* ---------------------------------------------------------- */
+  .text-color-dark-primary {
+    /* @apply text-red-500 dark:text-green-500; */
+    /* @apply text-dark-primary dark:text-dark-primary-dark; */
+    @apply text-dark-primary;
+  }
+
+  .text-color-dark-secondary {
+    /* @apply text-yellow-500 dark:text-purple-500; */
+    /* @apply text-dark-secondary dark:text-dark-secondary-dark; */
+    @apply text-dark-secondary;
+  }
+
+  .text-color-dark-tertiary {
+    /* @apply text-pink-500 dark:text-pink-500; */
+    /* @apply text-dark-tertiary dark:text-dark-tertiary-dark; */
+    @apply text-dark-tertiary;
+  }
+}
+
+@import "navigation";
+@import "content";
