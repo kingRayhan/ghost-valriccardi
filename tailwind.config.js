@@ -10,6 +10,9 @@ module.exports = {
         roboto: ["Raleway", "sans-serif"],
         nunito: ["Nunito", "sans-serif"],
       },
+      borderWidth: {
+        6: "6px",
+      },
       colors: {
         accent: "var(--ghost-accent-color)",
         "dark-primary": {

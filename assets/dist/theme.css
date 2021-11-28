@@ -599,6 +599,9 @@ body{
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
+.mt-2{
+	margin-top: 0.5rem;
+}
 .mt-3{
 	margin-top: 0.75rem;
 }
@@ -647,6 +650,9 @@ body{
 .max-w-6xl{
 	max-width: 72rem;
 }
+.max-w-xl{
+	max-width: 36rem;
+}
 .cursor-not-allowed{
 	cursor: not-allowed;
 }
@@ -664,9 +670,6 @@ body{
 }
 .gap-8{
 	gap: 2rem;
-}
-.gap-12{
-	gap: 3rem;
 }
 .space-y-20 > :not([hidden]) ~ :not([hidden]){
 	--tw-space-y-reverse: 0;
@@ -712,14 +715,6 @@ body{
 .text-xl{
 	font-size: 1.25rem;
 	line-height: 1.75rem;
-}
-.text-4xl{
-	font-size: 2.25rem;
-	line-height: 2.5rem;
-}
-.text-3xl{
-	font-size: 1.875rem;
-	line-height: 2.25rem;
 }
 .text-sm{
 	font-size: 0.875rem;
@@ -1696,8 +1691,8 @@ a.kg-bookmark-container:hover {
   }
 }
 /*# sourceMappingURL=theme.css.map */
-.hover\:border-b-4:hover{
-	border-bottom-width: 4px;
+.hover\:border-b-6:hover{
+	border-bottom-width: 6px;
 }
 @media (min-width: 768px){
 	.md\:order-2{
