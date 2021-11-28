@@ -20,10 +20,6 @@
     "sass": "^1.43.5",
     "tailwindcss": "^2.2.19"
   },
-  "engines": {
-    "ghost": ">=4.0.0",
-    "ghost-api": "v4"
-  },
   "author": {
     "name": "kingrayhan",
     "email": "md.raihan095@northsouth.edu",
@@ -44,8 +40,12 @@
   },
   "bugs": "https://github.com/Daemon-Themes/ghost-starter/issues",
   "license": "ISC",
+  "engines": {
+    "ghost": ">=4.0.0",
+    "ghost-api": "v4"
+  },
   "config": {
-    "posts_per_page": 15,
+    "posts_per_page": 3,
     "image_sizes": {
       "xxs": {
         "width": 30

@@ -1,0 +1,11 @@
+<nav class="flex justify-between w-full" role="navigation">
+    <a 
+    class="font-semibold font-nunito {{^if prev}}cursor-not-allowed pointer-events-none text-gray-400{{/if}}" 
+    href="{{page_url prev}}">&larr; Newer Posts</a>
+    
+    <span class="font-semibold font-nunito">Page {{page}} of {{pages}}</span>
+        
+    <a 
+    class="font-semibold font-nunito {{^if next}}cursor-not-allowed pointer-events-none text-gray-400{{/if}}"  
+    href="{{page_url next}}">Older Posts &rarr;</a>
+</nav>

@@ -7,9 +7,21 @@
         {{/if}}
     </a>
 
-    <div class="header-nav">
+    <div class="hidden header-nav md:block">
         {{navigation}}
     </div>
+    <a class="hidden text-sm font-semibold uppercase md:block" href="#/portal/login">Login</a>
 
-    <a class="text-base font-semibold uppercase" href="#/portal/login">Login</a>
+    <button class="md:hidden" id="hamburger">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+    </button>
+</div>
+
+
+
+<div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu__cross">&times;</button>
+    {{navigation}}
 </div>

@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         roboto: ["Raleway", "sans-serif"],
+        nunito: ["Nunito", "sans-serif"],
       },
       colors: {
         accent: "var(--ghost-accent-color)",

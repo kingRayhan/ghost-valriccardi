@@ -1,5 +1,28 @@
+body {
+  @apply overflow-x-hidden;
+}
+
+.mobile-menu {
+  @apply absolute inset-0 h-screen w-screen z-50 bg-white;
+  @apply transform -translate-x-full;
+  @apply flex flex-col items-center justify-center;
+  @apply transition-transform ease-in-out duration-300;
+
+  &--active {
+    @apply transform -translate-x-0;
+  }
+
+  &__cross {
+    @apply absolute top-6 right-10 text-5xl text-gray-600;
+  }
+}
+
 .nav {
   @apply flex space-x-5;
+
+  .mobile-menu & {
+    @apply flex-col space-x-0 space-y-4 text-center font-semibold;
+  }
 
   &__link {
     @apply uppercase;

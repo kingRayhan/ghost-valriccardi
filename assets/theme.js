@@ -3,7 +3,7 @@ var pathname = window.location.pathname;
 $(function () {
   "use strict";
   //   loadMore();
-  //   mobileMenu();
+  mobileMenu();
   socialShareButtons();
   //   darkMode();
 });
@@ -39,14 +39,19 @@ $(function () {
 //   }
 // }
 
-// function mobileMenu() {
-//   var menu = $("#mobile-menu");
-//   var button = $("#hamburger");
+function mobileMenu() {
+  var menu = $("#mobile-menu");
+  var button = $("#hamburger");
+  var cross = $(".mobile-menu__cross");
 
-//   button.click(function () {
-//     menu.toggleClass("active");
-//   });
-// }
+  cross.click(function () {
+    menu.removeClass("mobile-menu--active");
+  });
+
+  button.click(function () {
+    menu.addClass("mobile-menu--active");
+  });
+}
 
 function socialShareButtons() {
   const button = $("[data-social-share-button]");
