@@ -1,7 +1,7 @@
 {{!< default}}
 
 {{#post}}
-    <div class="max-w-3xl mx-auto my-20 ">
+    <div class="max-w-3xl mx-auto my-5 md:my-20 ">
         <header class="flex flex-col">
             <h1 class="text-2xl font-bold text-center md:text-4xl text-color-dark-primary">{{title}}</h1>
             <div class="flex justify-center my-2 space-x-3 text-dark-secondary">
@@ -16,7 +16,7 @@
             </div>
             
             {{#if custom_excerpt}}
-            <p class="my-8 text-xl font-semibold text-dark-primary">
+            <p class="my-8 text-xl font-semibold text-center text-dark-primary">
                 {{custom_excerpt}}
             </p>
             {{/if}}
@@ -38,7 +38,15 @@
         
 
         <div class="my-10 content-typography">
-            {{{content}}}
+            {{#if access}}
+                {{{content}}}
+            {{else}}
+                {{{html}}}
+            {{/if}}
         </div>
+        {{^if access}}
+            {{> "content-cta"}}
+        {{/if}}
+        
     </div>
 {{/post}}

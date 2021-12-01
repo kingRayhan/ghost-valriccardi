@@ -16,6 +16,12 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="{{asset 'dist/theme.css'}}">
+
+    <script>
+        var homeUrl = "{{ @site.url }}";
+        var next_page = '{{ pagination.next }}';
+        var total_pages = '{{ pagination.pages }}';
+    </script>
 </head>
 <body class="{{body_class}}">
     {{> "header"}}

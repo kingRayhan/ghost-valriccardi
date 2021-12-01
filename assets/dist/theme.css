@@ -579,13 +579,17 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 }
-.my-20{
-	margin-top: 5rem;
-	margin-bottom: 5rem;
-}
 .my-10{
 	margin-top: 2.5rem;
 	margin-bottom: 2.5rem;
+}
+.my-24{
+	margin-top: 6rem;
+	margin-bottom: 6rem;
+}
+.my-5{
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
 }
 .my-2{
 	margin-top: 0.5rem;
@@ -594,6 +598,10 @@ body{
 .my-8{
 	margin-top: 2rem;
 	margin-bottom: 2rem;
+}
+.my-20{
+	margin-top: 5rem;
+	margin-bottom: 5rem;
 }
 .my-4{
 	margin-top: 1rem;
@@ -611,6 +619,9 @@ body{
 .inline-block{
 	display: inline-block;
 }
+.inline{
+	display: inline;
+}
 .flex{
 	display: flex;
 }
@@ -623,11 +634,17 @@ body{
 .h-full{
 	height: 100%;
 }
-.h-6{
-	height: 1.5rem;
+.h-10{
+	height: 2.5rem;
 }
 .h-8{
 	height: 2rem;
+}
+.h-6{
+	height: 1.5rem;
+}
+.max-h-52{
+	max-height: 13rem;
 }
 .w-screen{
 	width: 100vw;
@@ -635,11 +652,17 @@ body{
 .w-full{
 	width: 100%;
 }
-.w-6{
-	width: 1.5rem;
+.w-14{
+	width: 3.5rem;
+}
+.w-10{
+	width: 2.5rem;
 }
 .w-auto{
 	width: auto;
+}
+.w-6{
+	width: 1.5rem;
 }
 .max-w-2xl{
 	max-width: 42rem;
@@ -652,6 +675,9 @@ body{
 }
 .max-w-xl{
 	max-width: 36rem;
+}
+.transform{
+	transform: var(--tw-transform);
 }
 .cursor-not-allowed{
 	cursor: not-allowed;
@@ -676,6 +702,11 @@ body{
 	margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(5rem * var(--tw-space-y-reverse));
 }
+.space-x-2 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-x-reverse: 0;
+	margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+	margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
 .space-x-3 > :not([hidden]) ~ :not([hidden]){
 	--tw-space-x-reverse: 0;
 	margin-right: calc(0.75rem * var(--tw-space-x-reverse));
@@ -694,6 +725,9 @@ body{
 }
 .border-accent{
 	border-color: var(--ghost-accent-color);
+}
+.bg-accent{
+	background-color: var(--ghost-accent-color);
 }
 .object-cover{
 	-o-object-fit: cover;
@@ -716,6 +750,14 @@ body{
 	font-size: 1.25rem;
 	line-height: 1.75rem;
 }
+.text-base{
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+.text-lg{
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+}
 .text-sm{
 	font-size: 0.875rem;
 	line-height: 1.25rem;
@@ -731,6 +773,9 @@ body{
 }
 .uppercase{
 	text-transform: uppercase;
+}
+.leading-10{
+	line-height: 2.5rem;
 }
 .text-dark-secondary{
 	--tw-text-opacity: 1;
@@ -751,8 +796,16 @@ body{
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 150ms;
 }
+.transition-all{
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+}
 .duration-200{
 	transition-duration: 200ms;
+}
+.duration-150{
+	transition-duration: 150ms;
 }
 .line-clamp-3{
 	overflow: hidden;
@@ -1694,6 +1747,10 @@ a.kg-bookmark-container:hover {
 .hover\:border-b-6:hover{
 	border-bottom-width: 6px;
 }
+.group:hover .group-hover\:translate-x-3{
+	--tw-translate-x: 0.75rem;
+	transform: var(--tw-transform);
+}
 @media (min-width: 768px){
 	.md\:order-2{
 		order: 2;
@@ -1701,6 +1758,10 @@ a.kg-bookmark-container:hover {
 	.md\:my-28{
 		margin-top: 7rem;
 		margin-bottom: 7rem;
+	}
+	.md\:my-20{
+		margin-top: 5rem;
+		margin-bottom: 5rem;
 	}
 	.md\:block{
 		display: block;
@@ -1721,6 +1782,13 @@ a.kg-bookmark-container:hover {
 	.md\:text-4xl{
 		font-size: 2.25rem;
 		line-height: 2.5rem;
+	}
+	.md\:text-\[32px\]{
+		font-size: 32px;
+	}
+	.md\:text-lg{
+		font-size: 1.125rem;
+		line-height: 1.75rem;
 	}
 }
 

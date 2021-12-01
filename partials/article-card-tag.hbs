@@ -1,6 +1,6 @@
-<article class="grid gap-8 md:gap-12 md:grid-cols-2">
+<article class="grid items-center gap-8 md:gap-12 md:grid-cols-2">
     {{#if feature_image}}
-    <a href="{{ url }}" class="inline-block aspect-w-1 aspect-h-1">
+    <a href="{{ url }}" class="inline-block max-h-52">
         <img class="object-cover w-full h-full" srcset="{{img_url feature_image size='s'}} 300w, {{img_url feature_image size='m' }} 600w,
             {{img_url feature_image size='l' }} 1000w, {{img_url feature_image size='xl' }} 2000w"
             sizes="(max-width: 1000px) 400px, 700px" src="{{img_url feature_image size=" m"}}"
@@ -16,11 +16,15 @@
         </h2>
         <p class="text-xl text-color-dark-primary line-clamp-3 font-nunito">{{excerpt}}</p>
 
-        <a href="#" class="flex items-center self-end mt-3 space-x-3 text-xl font-bold ">
+        <a href="{{url}}" class="flex items-center self-end mt-3 space-x-2 text-xl font-bold group">
             <span>Learn More</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            <svg class="transition-all duration-150 group-hover:translate-x-3 w-14" version="1.0"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.000000 29.000000" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(0.000000,29.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                    <path d="M507 213 c-4 -3 0 -14 8 -23 14 -16 3 -17 -157 -24 -201 -8 -253 -15
+                    -253 -36 0 -11 11 -15 40 -14 22 1 119 5 215 9 145 6 173 5 163 -6 -18 -18
+                    -16 -39 3 -39 22 0 94 58 94 75 0 8 -20 26 -43 40 -45 26 -59 30 -70 18z" />
+                </g>
             </svg>
         </a>
     </div>

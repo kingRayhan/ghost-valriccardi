@@ -45,7 +45,7 @@
     "ghost-api": "v4"
   },
   "config": {
-    "posts_per_page": 3,
+    "posts_per_page": 4,
     "image_sizes": {
       "xxs": {
         "width": 30

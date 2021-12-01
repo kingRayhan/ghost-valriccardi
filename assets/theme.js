@@ -2,42 +2,42 @@ var pathname = window.location.pathname;
 
 $(function () {
   "use strict";
-  //   loadMore();
+  loadMore();
   mobileMenu();
   socialShareButtons();
   //   darkMode();
 });
 
-// function loadMore() {
-//   const button = $("#loadmore");
-//   const buttonLabel = $("#loadmore").text();
-//   var nextPageUrl = `/page/${next_page}`;
+function loadMore() {
+  const button = $("#loadmore");
+  const buttonLabel = $("#loadmore").text();
+  var nextPageUrl = `${homeUrl}/page/${next_page}`;
 
-//   if (button.length) {
-//     button.click(function () {
-//       $.ajax({
-//         url: nextPageUrl,
-//         type: "GET",
-//         dataType: "html",
+  if (button.length) {
+    button.click(function () {
+      $.ajax({
+        url: nextPageUrl,
+        type: "GET",
+        dataType: "html",
 
-//         beforeSend: function () {
-//           button.text("Loading...");
-//         },
-//       }).done(function (data) {
-//         var $data = $(data);
-//         $("#posts").append($data.find("#posts").html());
+        beforeSend: function () {
+          button.text("Loading...");
+        },
+      }).done(function (data) {
+        var $data = $(data);
+        $("#posts").append($data.find("#posts").html());
 
-//         if (total_pages > next_page) {
-//           button.text(buttonLabel);
-//           next_page++;
-//           nextPageUrl = `/page/${next_page}`;
-//         } else {
-//           button.remove();
-//         }
-//       });
-//     });
-//   }
-// }
+        if (total_pages > next_page) {
+          button.text(buttonLabel);
+          next_page++;
+          nextPageUrl = `/page/${next_page}`;
+        } else {
+          button.remove();
+        }
+      });
+    });
+  }
+}
 
 function mobileMenu() {
   var menu = $("#mobile-menu");
