@@ -30,7 +30,7 @@ body {
       @apply text-sm font-semibold uppercase;
     }
     .footer-nav & {
-      @apply text-dark-secondary capitalize;
+      @apply text-dark-secondary capitalize font-nunito font-semibold text-lg;
     }
   }
 }

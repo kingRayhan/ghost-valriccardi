@@ -4,7 +4,7 @@
 }
 
 .content-typography {
-  @apply prose prose-lg max-w-none;
+  @apply prose prose-lg max-w-none font-nunito;
   @apply text-color-dark-primary;
   @apply flex flex-col items-center;
 

@@ -613,8 +613,20 @@ body{
 .mt-3{
 	margin-top: 0.75rem;
 }
+.mt-20{
+	margin-top: 5rem;
+}
+.mb-32{
+	margin-bottom: 8rem;
+}
+.mt-6{
+	margin-top: 1.5rem;
+}
 .mr-4{
 	margin-right: 1rem;
+}
+.block{
+	display: block;
 }
 .inline-block{
 	display: inline-block;
@@ -658,11 +670,16 @@ body{
 .w-10{
 	width: 2.5rem;
 }
-.w-auto{
-	width: auto;
+.w-max{
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
 }
 .w-6{
 	width: 1.5rem;
+}
+.w-auto{
+	width: auto;
 }
 .max-w-2xl{
 	max-width: 42rem;
@@ -717,6 +734,11 @@ body{
 	margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
+.space-x-4 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-x-reverse: 0;
+	margin-right: calc(1rem * var(--tw-space-x-reverse));
+	margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
 .self-end{
 	align-self: flex-end;
 }
@@ -736,6 +758,14 @@ body{
 .p-8{
 	padding: 2rem;
 }
+.px-10{
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+}
+.py-2{
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
 .text-center{
 	text-align: center;
 }
@@ -754,9 +784,9 @@ body{
 	font-size: 1rem;
 	line-height: 1.5rem;
 }
-.text-lg{
-	font-size: 1.125rem;
-	line-height: 1.75rem;
+.text-3xl{
+	font-size: 1.875rem;
+	line-height: 2.25rem;
 }
 .text-sm{
 	font-size: 0.875rem;
@@ -784,6 +814,10 @@ body{
 .text-dark-primary{
 	--tw-text-opacity: 1;
 	color: rgba(32, 32, 32, var(--tw-text-opacity));
+}
+.text-white{
+	--tw-text-opacity: 1;
+	color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 .text-gray-400{
 	--tw-text-opacity: 1;
@@ -898,6 +932,10 @@ body{
 	text-transform: uppercase;
 }
 .footer-nav .nav__link{
+	font-family: Nunito, sans-serif;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+	font-weight: 600;
 	text-transform: capitalize;
 	--tw-text-opacity: 1;
 	color: rgba(177, 185, 196, var(--tw-text-opacity));
@@ -1520,7 +1558,8 @@ body{
 	margin-bottom: 0;
 }
 
-.content-typography {
+.content-typography{
+	font-family: Nunito, sans-serif;
     /* @apply text-red-500 dark:text-green-500; */
     /* @apply text-dark-primary dark:text-dark-primary-dark; */
     --tw-text-opacity: 1;
@@ -1528,7 +1567,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+}
 .content-typography *{
 	align-self: flex-start;
 }
