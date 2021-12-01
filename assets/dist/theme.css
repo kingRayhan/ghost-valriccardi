@@ -610,6 +610,9 @@ body{
 .mt-2{
 	margin-top: 0.5rem;
 }
+.ml-2{
+	margin-left: 0.5rem;
+}
 .mt-3{
 	margin-top: 0.75rem;
 }
@@ -646,9 +649,6 @@ body{
 .h-full{
 	height: 100%;
 }
-.h-10{
-	height: 2.5rem;
-}
 .h-8{
 	height: 2rem;
 }
@@ -664,11 +664,11 @@ body{
 .w-full{
 	width: 100%;
 }
+.w-8{
+	width: 2rem;
+}
 .w-14{
 	width: 3.5rem;
-}
-.w-10{
-	width: 2.5rem;
 }
 .w-max{
 	width: -webkit-max-content;
