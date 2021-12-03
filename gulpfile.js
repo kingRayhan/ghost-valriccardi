@@ -3,7 +3,6 @@ const sass = require("gulp-sass")(require("sass"));
 const zip = require("gulp-zip");
 const pump = require("pump");
 const postCSS = require("gulp-postcss");
-const cssnano = require("gulp-cssnano");
 const browsersync = require("browser-sync").create();
 
 const handleError = (done) => {
@@ -32,7 +31,7 @@ function postCSSTask(done) {
     [
       src("assets/dist/*.css", { sourcemaps: true }),
       postCSS(),
-      cssnano(),
+      // cssnano(),
       dest("assets/dist", { sourcemaps: "." }),
       browsersync.stream(),
     ],

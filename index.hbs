@@ -11,7 +11,7 @@
 
 <div class="max-w-3xl mx-auto">
     <div class="flex flex-col space-y-20" id="posts">
-        {{#foreach posts}}
+        {{#foreach posts filter="featured:true"}}
             {{> "article-card"}}
         {{/foreach}}
     </div>

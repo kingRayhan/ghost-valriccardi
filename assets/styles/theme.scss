@@ -40,3 +40,11 @@
 
 @import "navigation";
 @import "content";
+
+.line-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
