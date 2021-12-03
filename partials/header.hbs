@@ -1,5 +1,5 @@
-<div class="flex items-center justify-between p-8">
-    <a class="text-2xl font-medium " href="{{@site.url}}">
+<div class="flex items-center justify-between p-4 md:p-8">
+    <a class="text-xl font-medium uppercase" href="{{@site.url}}">
         {{#if @site.logo}}
         <img src="{{@site.logo}}" alt="{{@site.title}}" class="w-auto h-8 mr-4 ">
         {{else}}
@@ -13,7 +13,9 @@
 
     <div class="flex space-x-4">
         {{#if @member}}
-        <a class="hidden text-sm font-semibold uppercase md:block" href="#/portal/">Portal</a>
+        <a class="hidden text-sm font-semibold uppercase md:block" href="#/portal/">
+            {{@member.name}}
+        </a>
         <a class="hidden text-sm font-semibold uppercase md:block" href="javascript:" data-members-signout>Sign out</a>
         {{else}}
         <a class="hidden text-sm font-semibold uppercase md:block" href="#/portal/login">Login</a>

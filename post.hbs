@@ -4,7 +4,7 @@
     <div class="max-w-3xl mx-auto my-5 md:my-20 ">
         <header class="flex flex-col">
             <h1 class="text-2xl font-bold text-center md:text-4xl text-color-dark-primary">{{title}}</h1>
-            <div class="flex justify-center my-2 space-x-3 text-dark-secondary">
+            <div class="flex justify-center my-2 space-x-3 font-semibold text-gray-500 font-nunito">
                 {{#primary_author}}
                 <span>{{name}}</span>
                 {{/primary_author}}
@@ -12,11 +12,11 @@
                 <span>|</span>
                 <time datetime="{{date format=" YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
                 <span>|</span>
-                <span>{{reading_time}} min read</span>
+                <span>{{reading_time}}</span>
             </div>
             
             {{#if custom_excerpt}}
-            <p class="my-8 text-xl font-semibold text-center text-dark-primary">
+            <p class="my-8 text-xl font-semibold text-center text-dark-primary font-nunito">
                 {{custom_excerpt}}
             </p>
             {{/if}}

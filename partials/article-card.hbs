@@ -1,4 +1,4 @@
-<article class="grid gap-8 md:gap-12 md:grid-cols-2">
+<article class="grid gap-0 md:gap-12 md:grid-cols-2">
     {{#if feature_image}}
     <a href="{{ url }}" class="{{#if @even}}md:order-2{{/if}} inline-block aspect-w-1 aspect-h-1">
         <img class="object-cover w-full h-full" srcset="{{img_url feature_image size='s'}} 300w, {{img_url feature_image size='m' }} 600w,
@@ -9,7 +9,7 @@
     {{/if}}
 
     <div class="flex flex-col justify-center">
-        <h2 class="my-4 text-xl font-bold md:text-[32px] leading-10">
+        <h2 class="my-4 text-xl font-bold md:text-[32px] md:leading-10">
             <a class="transition duration-200 hover:border-b-6 border-accent" href="{{ url }}">
                 {{title}}
                 {{#has visibility="paid"}}
@@ -28,9 +28,9 @@
             </a>
         </h2>
         <p class="text-base md:text-lg text-color-dark-primary line-clamp-3 font-nunito">{{excerpt}}</p>
-        <a href="{{url}}" class="flex items-center self-end mt-3 space-x-2 text-xl font-bold group">
+        <a href="{{url}}" class="flex items-center self-end mt-3 space-x-2 text-base font-bold group">
             <span>Learn More</span>
-            <svg class="transition-all duration-150 group-hover:translate-x-3 w-14" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.000000 29.000000" preserveAspectRatio="xMidYMid meet">
+            <svg class="transition-all duration-150 group-hover:translate-x-3 w-9" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.000000 29.000000" preserveAspectRatio="xMidYMid meet">
                 <g transform="translate(0.000000,29.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                     <path d="M507 213 c-4 -3 0 -14 8 -23 14 -16 3 -17 -157 -24 -201 -8 -253 -15
             -253 -36 0 -11 11 -15 40 -14 22 1 119 5 215 9 145 6 173 5 163 -6 -18 -18

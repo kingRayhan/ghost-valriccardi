@@ -11,7 +11,7 @@ $(function () {
 function loadMore() {
   const button = $("#loadmore");
   const buttonLabel = $("#loadmore").text();
-  var nextPageUrl = `${homeUrl}/page/${next_page}`;
+  var nextPageUrl = `${pageUrl}/page/${next_page}`;
 
   if (button.length) {
     button.click(function () {
