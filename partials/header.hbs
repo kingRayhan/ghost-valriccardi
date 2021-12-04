@@ -13,7 +13,7 @@
 
     <div class="flex space-x-4">
         {{#if @member}}
-        <a class="hidden text-sm font-semibold uppercase md:block" href="#/portal/">
+        <a class="hidden text-sm font-semibold uppercase md:block" href="#/portal">
             {{@member.name}}
         </a>
         <a class="hidden text-sm font-semibold uppercase md:block" href="javascript:" data-members-signout>Sign out</a>
@@ -32,7 +32,22 @@
 
 
 
-<div class="mobile-menu" id="mobile-menu">
+<div class="relative mobile-menu" id="mobile-menu">
     <button class="mobile-menu__cross">&times;</button>
-    {{navigation}}
+    <div>
+        {{navigation}}
+        
+        <div class="absolute flex flex-col items-center justify-center bottom-10 left-[50%] transform transform-gpu translate-x-[-50%]">
+        <div class="flex space-y-4">
+            {{#if @member}}
+            <a class="text-sm font-semibold uppercase md:block" href="#/portal">
+                {{@member.name}}
+            </a>
+            <a class="text-sm font-semibold uppercase md:block" href="javascript:" data-members-signout>Sign out</a>
+            {{else}}
+            <a class="text-sm font-semibold uppercase md:block" href="#/portal/login">Login</a>
+            {{/if}}
+        </div>
+        </div>
+    </div>
 </div>

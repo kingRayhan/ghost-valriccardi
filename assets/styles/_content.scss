@@ -61,29 +61,6 @@ figcaption {
 
 /* Size: Wide */
 .kg-width-wide {
-  @apply w-screen md:max-w-[60vw];
-}
-
-/* Size: Fullwide */
-.kg-width-full {
-  @apply w-screen max-w-[100vw];
-}
-
-/* Galleries and Images
-/* ---------------------------------------------------------- */
-.kg-card {
-  @apply self-center w-full;
-}
-figcaption {
-  @apply text-center;
-}
-
-.kg-image {
-  @apply w-full;
-}
-
-/* Size: Wide */
-.kg-width-wide {
   @apply w-screen lg:max-w-[60vw] md:max-w-[90vw];
 }
 

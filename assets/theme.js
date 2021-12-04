@@ -14,6 +14,10 @@ function loadMore() {
   var nextPageUrl = `${pageUrl}/page/${next_page}`;
 
   if (button.length) {
+    if (!Boolean(next_page)) {
+      button.remove();
+    }
+
     button.click(function () {
       $.ajax({
         url: nextPageUrl,
@@ -45,10 +49,12 @@ function mobileMenu() {
   var cross = $(".mobile-menu__cross");
 
   cross.click(function () {
+    $("body").removeClass("menu-open");
     menu.removeClass("mobile-menu--active");
   });
 
   button.click(function () {
+    $("body").addClass("menu-open");
     menu.addClass("mobile-menu--active");
   });
 }
