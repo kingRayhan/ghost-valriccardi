@@ -1,0 +1,23 @@
+{{!< default}} 
+
+{{#if @site.description}} <div class="max-w-2xl mx-auto my-12 text-center md:my-28">
+    <h2 class="text-2xl font-bold md:text-5xl">
+        {{@site.description}}
+    </h2>
+    </div>
+{{/if}}
+
+<div class="max-w-3xl mx-auto">
+    <div class="flex flex-col space-y-20" id="posts">
+        {{#foreach posts filter="featured:true"}}
+        {{> "article-card"}}
+        {{/foreach}}
+    </div>
+
+    <div class="my-24 text-center">
+        <button id="loadmore"
+            class="px-4 py-2 mx-auto text-lg font-bold transition-all duration-200 border hover:bg-gray-100">
+            Load More
+        </button>
+    </div>
+</div>
