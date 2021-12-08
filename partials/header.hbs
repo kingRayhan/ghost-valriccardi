@@ -38,16 +38,16 @@
         {{navigation}}
         
         <div class="absolute flex flex-col items-center justify-center bottom-10 left-[50%] transform transform-gpu translate-x-[-50%]">
-        <div class="flex space-y-4">
-            {{#if @member}}
-            <a class="text-sm font-semibold uppercase md:block" href="#/portal">
-                {{@member.name}}
-            </a>
-            <a class="text-sm font-semibold uppercase md:block" href="javascript:" data-members-signout>Sign out</a>
-            {{else}}
-            <a class="text-sm font-semibold uppercase md:block" href="#/portal/login">Login</a>
-            {{/if}}
-        </div>
+            <div class="flex flex-col space-y-4">
+                {{#if @member}}
+                <a class="text-sm font-semibold uppercase md:block" href="#/portal">
+                    {{@member.name}}
+                </a>
+                <a class="text-sm font-semibold uppercase md:block" href="javascript:" data-members-signout>Sign out</a>
+                {{else}}
+                <a class="text-sm font-semibold uppercase md:block" href="#/portal/login">Login</a>
+                {{/if}}
+            </div>
         </div>
     </div>
 </div>
